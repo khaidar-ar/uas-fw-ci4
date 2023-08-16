@@ -24,9 +24,9 @@ $uri3 = $uri[3] ?? '';
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-tasks"></i> <span>Data Transaksi</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="/dashboard/data-transaksi/belum-membayar">Belum membayar</a></li>
-                    <li><a class="nav-link" href="/dashboard/data-transaksi/sudah-membayar">Sudah membayar</a></li>
-                    <li><a class="nav-link" href="/dashboard/data-transaksi/terverifikasi">Terverifikasi</a></li>
-                    <li><a class="nav-link" href="/dashboard/data-transaksi/dikirim">Sedang dikirim</a></li>
+                    <li><a class="nav-link" href="/dashboard/data-transaksi/sudah-membayar">Selesai dikerjakan</a></li>
+                    <li><a class="nav-link" href="/dashboard/data-transaksi/terverifikasi">Sedang dikerjakan</a></li>
+                    <li><a class="nav-link" href="/dashboard/data-transaksi/dikirim">Transaksi Selesai</a></li>
                     <li><a class="nav-link" href="/dashboard/data-transaksi/selesai">Selesai</a></li>
                 </ul>
             </li>

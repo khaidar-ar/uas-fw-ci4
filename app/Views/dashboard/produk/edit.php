@@ -40,13 +40,13 @@
             <div class="card-body">
                 <form action="<?= base_url('dashboard/produk/edit/save') ?>" method="post" enctype="multipart/form-data">
                     <?= csrf_field() ?>
-                    <input type="hidden" name="id" value="<?= $data_produk['id'] ?>">
+                    <input type="hidden" name="id" value="<?= $produk['id'] ?>">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group row">
                                 <label for="nama" class="col-sm-2 col-form-label">Nama Produk</label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="nama" class="form-control" id="nama" placeholder="Masukkan nama produk" value="<?= $data_produk['nama'] ?>" required="">
+                                    <input type="text" name="nama" class="form-control" id="nama" placeholder="Masukkan nama produk" value="<?= $produk['nama'] ?>" required="">
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -59,7 +59,7 @@
                                         <?php 
                                             if($kategori) : 
                                                 foreach($kategori as $kat) :
-                                                    if($kat['id_kategori'] == $data_produk['kategori']){
+                                                    if($kat['id_kategori'] == $produk['kategori']){
                                         ?>
                                                         <option value="<?= $kat['id_kategori'] ?>" selected><?= $kat['nama'] ?></option>
                                         <?php
@@ -77,7 +77,7 @@
                             <div class="form-group row">
                                 <label for="harga" class="col-sm-2 col-form-label">Deskripsi</label>
                                 <div class="col-sm-10">
-                                    <textarea class="summernote-simple" name="deskripsi" id="deskripsi" required=""><?= $data_produk['deskripsi'] ?></textarea>
+                                    <textarea class="summernote-simple" name="deskripsi" id="deskripsi" required=""><?= $produk['deskripsi'] ?></textarea>
                                 </div>
                             </div>
                             <div class="row">
@@ -85,7 +85,7 @@
                                     <div class="form-group">
                                         <label for="foto" class="col-form-label">Foto Sekarang :</label>
                                         <div class="float-right py-2 mb-4 foto-now">
-                                            <img src="<?= base_url('assets/img/produk') ?>/<?= $data_produk['gambar'] ?>" width="250px" height="250px" class="img-fluid img-thumbnail">
+                                            <img src="<?= base_url('assets/img/produk') ?>/<?= $produk['gambar'] ?>" width="250px" height="250px" class="img-fluid img-thumbnail">
                                             <!-- <div class="invalid-feedback">
                                             </div> -->
                                         </div>
@@ -132,7 +132,7 @@
                                 <div class="form-group row">
                                     <label for="stok" class="col-sm-4 col-form-label"></label>
                                     <div class="col-sm-8">
-                                    <a href="<?= base_url('dashboard/produk/hapus-variasi/'.$s['id'].'/'.$data_produk['id']) ?>" class="btn btn-outline-danger float-right"><i class="fas fa-trash"></i> Hapus Variasi</a>
+                                    <a href="<?= base_url('dashboard/produk/hapus-variasi/'.$s['id'].'/'.$produk['id']) ?>" class="btn btn-outline-danger float-right"><i class="fas fa-trash"></i> Hapus Variasi</a>
                                     </div>
                                 </div>
                                 <hr>
@@ -143,7 +143,7 @@
                                     <input type="hidden" name="variasi[<?= $i ?>][id]" value="<?= $s['id'] ?>">
                                     <label for="namavariasi" class="col-sm-4 col-form-label">Variasi Produk</label>
                                     <div class="col-sm-8">
-                                        <input type="text" name="variasi[<?= $i ?>][nama]" class="form-control" id="namavariasi" placeholder="XL" value="<?= $s['ukuran'] ?>" required="">
+                                        <input type="text" name="variasi[<?= $i ?>][nama]" class="form-control" id="namavariasi" placeholder="Variasi" value="<?= $s['ukuran'] ?>" required="">
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -161,7 +161,7 @@
                                 <div class="form-group row">
                                     <label for="stok" class="col-sm-4 col-form-label"></label>
                                     <div class="col-sm-8">
-                                        <a href="<?= base_url('dashboard/produk/hapus-variasi/'.$s['id'].'/'.$data_produk['id']) ?>" class="btn btn-outline-danger float-right"><i class="fas fa-trash"></i> Hapus Variasi</a>
+                                        <a href="<?= base_url('dashboard/produk/hapus-variasi/'.$s['id'].'/'.$produk['id']) ?>" class="btn btn-outline-danger float-right"><i class="fas fa-trash"></i> Hapus Variasi</a>
                                     </div>
                                 </div>
                             <?php } ?>
