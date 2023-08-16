@@ -11,4 +11,10 @@
 <li>Ilham Adji Saputra - 202011420030</li>
 </ul>
 
+<h2>Technologies</h2>
+<ul>
+<li>Chart Js</li>
+<li>Datatables Client Side</li>
+</ul>
+
 
